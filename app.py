@@ -4,7 +4,7 @@ import joblib
 
 # These lines are where the error is happening
 # It means "salary_prediction_model.pkl" is likely empty or 0 bytes on GitHub
-model = joblib.load("salary_prediction_model.pkl")
+model = joblib.load("salary_prediction_model(1).pkl")
 encoder = joblib.load("label_encoder.pkl")
 
 st.title("Salary prediction app")
