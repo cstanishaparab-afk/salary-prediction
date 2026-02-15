@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# These lines run as soon as the app starts
-# If the error is on line 6 or 7, your .pkl files are the problem
+# These lines are where the error is happening
+# It means "salary_prediction_model.pkl" is likely empty or 0 bytes on GitHub
 model = joblib.load("salary_prediction_model.pkl")
 encoder = joblib.load("label_encoder.pkl")
 
@@ -24,8 +24,9 @@ df = pd.DataFrame({
 })
 
 if st.button("Predict"):
-    # This loop handles the encoding transformation
+    # Indented 4 spaces
     for col in encoder:
+        # Indented 8 spaces
         df[col] = encoder[col].transform(df[col])
 
     prediction = model.predict(df)
