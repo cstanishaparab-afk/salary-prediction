@@ -24,7 +24,6 @@ df = pd.DataFrame({
 })
 
 if st.button("Predict"):
-    # Indented 4 spaces
     for col in encoder:
         # Indented 8 spaces
         df[col] = encoder[col].transform(df[col])
