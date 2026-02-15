@@ -26,11 +26,10 @@ df = pd.DataFrame({
 if st.button("Predict"):
     # Indented 4 spaces (Inside the IF)
     for col in encoder:
-        # Indented 8 spaces (Inside the FOR)
         df[col] = encoder[col].transform(df[col])
 
     df = df[model.feature_names_in_]
 
     # Indented 4 spaces (BACK aligned with the 'for' to exit the loop)
-    prediction = model.predict(df)
-    st.success(f"Predicted Salary: {prediction[0]:,.2f}")
+prediction = model.predict(df)
+st.success(f"Predicted Salary: {prediction[0]:,.2f}")
