@@ -24,9 +24,10 @@ df = pd.DataFrame({
 })
 
 if st.button("Predict"):
+    # 1. First, loop through and encode all columns
     for col in encoder:
-        # Indented 8 spaces
         df[col] = encoder[col].transform(df[col])
-
+        
+    # 2. NOW (outside the for-loop but inside the if-block), run the prediction
     prediction = model.predict(df)
     st.success(f"Predicted Salary: {prediction[0]:,.2f}")
