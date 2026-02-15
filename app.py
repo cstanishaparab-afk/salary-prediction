@@ -20,7 +20,7 @@ df = pd.DataFrame({
     "Gender": [gender],
     "Education Level": [education],
     "Job Title": [job_title],
-    "YearsExperience": [year_of_exp]
+    "Year of Experience": [year_of_exp]
 })
 
 if st.button("Predict"):
