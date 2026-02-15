@@ -17,8 +17,6 @@ model = joblib.load("salary_prediction_model.pkl")
 encoder = joblib.load("label_encoder.pkl")
 
 st.title("Salary prediction app")
-st.write("Model expects:", model.feature_names_in_)
-st.write("You provided:", df.columns)
 
 
 age = st.number_input("Age", 18, 60)
